@@ -27,8 +27,12 @@ Then visit `http://localhost:8000`.
 
 ## Hosting
 
-Upload the contents of `dist/` to a static web host. `.openai/hosting.json` retains the configuration for the existing ChatGPT Sites draft:
+GitHub Pages deploys automatically when changes are pushed to `main`. The workflow in `.github/workflows/jekyll-gh-pages.yml` uploads only `dist/`, so `dist/index.html` becomes the live homepage. No Jekyll build is needed. The workflow can also be run manually from the Actions tab.
+
+For another static host, upload the contents of `dist/`.
+
+`.openai/hosting.json` retains the configuration for the existing ChatGPT Sites draft:
 
 https://lgs-verk.chirpy-iris-8724.chatgpt.site
 
-That draft currently has private access. This GitHub repository does not automatically deploy changes to it. The custom domain `www.lgsverk.is` has not yet been connected, and GitHub Pages has not been enabled.
+That draft currently has private access. This GitHub repository does not automatically deploy changes to it. The intended custom domain is `www.lgsverk.is`; custom-domain configuration is managed separately in GitHub Pages settings and DNS.
