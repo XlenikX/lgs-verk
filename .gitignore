@@ -1,0 +1,11 @@
+# Local state and secrets
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+.openai/*.local.*
