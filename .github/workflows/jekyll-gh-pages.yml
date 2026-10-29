@@ -30,6 +30,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Generate project gallery from photo folders
+        run: python3 scripts/build_projects.py
       - name: Verify website entry point
         run: test -s dist/index.html
       - name: Upload website
@@ -48,3 +50,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
